@@ -9,13 +9,13 @@
  * file that was distributed with this source code.
  */
 
-namespace Symfony\UX\Dropzone\Tests;
+namespace Symfony\UX\Dropzonemultiple\Tests;
 
 use PHPUnit\Framework\TestCase;
 use Symfony\Component\HttpKernel\Kernel;
-use Symfony\UX\Dropzone\Tests\Kernel\EmptyAppKernel;
-use Symfony\UX\Dropzone\Tests\Kernel\FrameworkAppKernel;
-use Symfony\UX\Dropzone\Tests\Kernel\TwigAppKernel;
+use Symfony\UX\Dropzonemultiple\Tests\Kernel\EmptyAppKernel;
+use Symfony\UX\Dropzonemultiple\Tests\Kernel\FrameworkAppKernel;
+use Symfony\UX\Dropzonemultiple\Tests\Kernel\TwigAppKernel;
 
 /**
  * @author Titouan Galopin <galopintitouan@gmail.com>
@@ -46,7 +46,7 @@ class DropzoneBundleTest extends TestCase
         $kernel->boot();
         $this->assertEquals([
             'form_div_layout.html.twig',
-            '@Dropzone/form_theme.html.twig',
+            '@Dropzonemultiple/form_theme.html.twig',
             'form_theme.html.twig',
         ], $kernel->getContainer()->getParameter('twig.form.resources'));
     }

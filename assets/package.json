@@ -1,6 +1,6 @@
 {
-    "name": "@symfony/ux-dropzone",
-    "description": "File input dropzones for Symfony Forms",
+    "name": "@symfony/ux-dropzonemultiple",
+    "description": "File input Dropzonesmultiple for Symfony Forms",
     "license": "MIT",
     "version": "1.1.0",
     "main": "dist/controller.js",
@@ -10,13 +10,13 @@
     },
     "symfony": {
         "controllers": {
-            "dropzone": {
+            "dropzonemultiple": {
                 "main": "dist/controller.js",
                 "webpackMode": "eager",
                 "fetch": "eager",
                 "enabled": true,
                 "autoimport": {
-                    "@symfony/ux-dropzone/dist/style.min.css": true
+                    "@symfony/ux-dropzonemultiple/dist/style.min.css": true
                 }
             }
         },

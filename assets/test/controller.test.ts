@@ -18,7 +18,7 @@ import DropzoneController from '../src/controller';
 // Controller used to check the actual controller was properly booted
 class CheckController extends Controller {
     connect() {
-        this.element.addEventListener('dropzone:connect', () => {
+        this.element.addEventListener('dropzonemultiple:connect', () => {
             this.element.classList.add('connected');
         });
     }
@@ -27,7 +27,7 @@ class CheckController extends Controller {
 const startStimulus = () => {
     const application = Application.start();
     application.register('check', CheckController);
-    application.register('dropzone', DropzoneController);
+    application.register('dropzonemultiple', DropzoneController);
 };
 
 describe('DropzoneController', () => {
@@ -35,35 +35,35 @@ describe('DropzoneController', () => {
 
     beforeEach(() => {
         container = mountDOM(`
-            <div class="dropzone-container" data-controller="check dropzone" data-testid="container"> 
+            <div class="dropzonemultiple-container" data-controller="check dropzonemultiple" data-testid="container"> 
                 <input type="file"
                        style="display: none"
-                       data-dropzone-target="input"
+                       data-dropzonemultiple-target="input"
                        data-testid="input" />
         
-                <div class="dropzone-placeholder" 
-                     data-dropzone-target="placeholder" 
+                <div class="dropzonemultiple-placeholder" 
+                     data-dropzonemultiple-target="placeholder" 
                      data-testid="placeholder">
                     Placeholder
                 </div>
         
-                <div class="dropzone-preview"
-                     data-dropzone-target="preview"
+                <div class="dropzonemultiple-preview"
+                     data-dropzonemultiple-target="preview"
                      data-testid="preview"
                      style="display: none">
                      
                     <button type="button"
-                            class="dropzone-preview-button"
-                            data-dropzone-target="previewClearButton"
+                            class="dropzonemultiple-preview-button"
+                            data-dropzonemultiple-target="previewClearButton"
                             data-testid="button"></button>
         
-                    <div class="dropzone-preview-image"
-                         data-dropzone-target="previewImage"
+                    <div class="dropzonemultiple-preview-image"
+                         data-dropzonemultiple-target="previewImage"
                          data-testid="preview-image"
                          style="display: none"></div>
         
-                    <div class="dropzone-preview-filename"
-                         data-dropzone-target="previewFilename" 
+                    <div class="dropzonemultiple-preview-filename"
+                         data-dropzonemultiple-target="previewFilename" 
                          data-testid="preview-filename"></div>
                 </div>
             </div>
@@ -87,7 +87,7 @@ describe('DropzoneController', () => {
 
         // Attach a listener to ensure the event is dispatched
         let dispatched = false;
-        getByTestId(container, 'container').addEventListener('dropzone:clear', () => (dispatched = true));
+        getByTestId(container, 'container').addEventListener('dropzonemultiple:clear', () => (dispatched = true));
 
         // Manually show preview
         getByTestId(container, 'input').style.display = 'none';
@@ -111,7 +111,7 @@ describe('DropzoneController', () => {
 
         // Attach a listener to ensure the event is dispatched
         let dispatched = null;
-        getByTestId(container, 'container').addEventListener('dropzone:change', (event) => (dispatched = event));
+        getByTestId(container, 'container').addEventListener('dropzonemultiple:change', (event) => (dispatched = event));
 
         // Select the file
         const input = getByTestId(container, 'input');
@@ -120,7 +120,7 @@ describe('DropzoneController', () => {
         user.upload(input, file);
         expect(input.files[0]).toStrictEqual(file);
 
-        // The dropzone should be in preview mode
+        // The dropzonemultiple should be in preview mode
         await waitFor(() => expect(getByTestId(container, 'input')).toHaveStyle({ display: 'none' }));
         await waitFor(() => expect(getByTestId(container, 'placeholder')).toHaveStyle({ display: 'none' }));
 

@@ -86,6 +86,6 @@ export default class extends Controller {
     }
 
     private dispatchEvent(name: string, payload: any = {}) {
-        this.dispatch(name, { detail: payload, prefix: 'dropzone' });
+        this.dispatch(name, { detail: payload, prefix: 'dropzonemultiple' });
     }
 }

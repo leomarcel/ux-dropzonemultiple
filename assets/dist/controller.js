@@ -44,7 +44,7 @@ class default_1 extends Controller {
         reader.readAsDataURL(file);
     }
     dispatchEvent(name, payload = {}) {
-        this.dispatch(name, { detail: payload, prefix: 'dropzone' });
+        this.dispatch(name, { detail: payload, prefix: 'dropzonemultiple' });
     }
 }
 default_1.targets = ['input', 'placeholder', 'preview', 'previewClearButton', 'previewFilename', 'previewImage'];

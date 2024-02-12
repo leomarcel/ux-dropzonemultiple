@@ -9,14 +9,14 @@
  * file that was distributed with this source code.
  */
 
-namespace Symfony\UX\Dropzone\DependencyInjection;
+namespace Symfony\UX\Dropzonemultiple\DependencyInjection;
 
 use Symfony\Component\AssetMapper\AssetMapperInterface;
 use Symfony\Component\DependencyInjection\ContainerBuilder;
 use Symfony\Component\DependencyInjection\Definition;
 use Symfony\Component\DependencyInjection\Extension\PrependExtensionInterface;
 use Symfony\Component\HttpKernel\DependencyInjection\Extension;
-use Symfony\UX\Dropzone\Form\DropzoneType;
+use Symfony\UX\Dropzonemultiple\Form\DropzonemultipleType;
 
 /**
  * @author Titouan Galopin <galopintitouan@gmail.com>
@@ -27,18 +27,18 @@ class DropzoneExtension extends Extension implements PrependExtensionInterface
 {
     public function prepend(ContainerBuilder $container)
     {
-        // Register the Dropzone form theme if TwigBundle is available
+        // Register the Dropzonemultiple form theme if TwigBundle is available
         $bundles = $container->getParameter('kernel.bundles');
 
         if (isset($bundles['TwigBundle'])) {
-            $container->prependExtensionConfig('twig', ['form_themes' => ['@Dropzone/form_theme.html.twig']]);
+            $container->prependExtensionConfig('twig', ['form_themes' => ['@Dropzonemultiple/form_theme.html.twig']]);
         }
 
         if ($this->isAssetMapperAvailable($container)) {
             $container->prependExtensionConfig('framework', [
                 'asset_mapper' => [
                     'paths' => [
-                        __DIR__.'/../../assets/dist' => '@symfony/ux-dropzone',
+                        __DIR__.'/../../assets/dist' => '@symfony/ux-dropzonemultiple',
                     ],
                 ],
             ]);
@@ -48,7 +48,7 @@ class DropzoneExtension extends Extension implements PrependExtensionInterface
     public function load(array $configs, ContainerBuilder $container)
     {
         $container
-            ->setDefinition('form.dropzone', new Definition(DropzoneType::class))
+            ->setDefinition('form.dropzonemultiple', new Definition(DropzonemultipleType::class))
             ->addTag('form.type')
             ->setPublic(false)
         ;

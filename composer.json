@@ -1,7 +1,7 @@
 {
-    "name": "symfony/ux-dropzone",
+    "name": "symfony/ux-dropzonemultiple",
     "type": "symfony-bundle",
-    "description": "File input dropzones for Symfony Forms",
+    "description": "File input Dropzonesmultiple for Symfony Forms",
     "keywords": [
         "symfony-ux"
     ],
@@ -19,12 +19,12 @@
     ],
     "autoload": {
         "psr-4": {
-            "Symfony\\UX\\Dropzone\\": "src/"
+            "Symfony\\UX\\Dropzonemultiple\\": "src/"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "Symfony\\UX\\Dropzone\\Tests\\": "tests/"
+            "Symfony\\UX\\Dropzonemultiple\\Tests\\": "tests/"
         }
     },
     "require": {

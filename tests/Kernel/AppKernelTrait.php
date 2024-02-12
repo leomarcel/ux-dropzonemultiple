@@ -9,7 +9,7 @@
  * file that was distributed with this source code.
  */
 
-namespace Symfony\UX\Dropzone\Tests\Kernel;
+namespace Symfony\UX\Dropzonemultiple\Tests\Kernel;
 
 /**
  * @author Titouan Galopin <galopintitouan@gmail.com>
@@ -30,7 +30,7 @@ trait AppKernelTrait
 
     private function createTmpDir(string $type): string
     {
-        $dir = sys_get_temp_dir().'/dropzone_bundle/'.uniqid($type.'_', true);
+        $dir = sys_get_temp_dir().'/dropzonemultiple_bundle/'.uniqid($type.'_', true);
 
         if (!file_exists($dir)) {
             mkdir($dir, 0777, true);

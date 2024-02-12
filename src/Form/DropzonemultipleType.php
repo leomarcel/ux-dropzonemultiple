@@ -9,7 +9,7 @@
  * file that was distributed with this source code.
  */
 
-namespace Symfony\UX\Dropzone\Form;
+namespace Symfony\UX\Dropzonemultiple\Form;
 
 use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\Extension\Core\Type\FileType;
@@ -20,7 +20,7 @@ use Symfony\Component\OptionsResolver\OptionsResolver;
  *
  * @final
  */
-class DropzoneType extends AbstractType
+class DropzonemultipleType extends AbstractType
 {
     public function configureOptions(OptionsResolver $resolver)
     {
@@ -38,6 +38,6 @@ class DropzoneType extends AbstractType
 
     public function getBlockPrefix()
     {
-        return 'dropzone';
+        return 'dropzonemultiple';
     }
 }
