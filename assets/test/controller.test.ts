@@ -12,8 +12,8 @@
 import { Application, Controller } from '@hotwired/stimulus';
 import { getByTestId, waitFor } from '@testing-library/dom';
 import user from '@testing-library/user-event';
-import { clearDOM, mountDOM } from 'leomarcel/stimulus-testing';
-import DropzoneController from '../src/controller';
+import { clearDOM, mountDOM } from '@symfony/stimulus-testing';
+import DropzonemultipleController from '../src/controller';
 
 // Controller used to check the actual controller was properly booted
 class CheckController extends Controller {
@@ -27,10 +27,10 @@ class CheckController extends Controller {
 const startStimulus = () => {
     const application = Application.start();
     application.register('check', CheckController);
-    application.register('dropzonemultiple', DropzoneController);
+    application.register('dropzonemultiple', DropzonemultipleController);
 };
 
-describe('DropzoneController', () => {
+describe('DropzonemultipleController', () => {
     let container;
 
     beforeEach(() => {

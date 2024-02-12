@@ -18,7 +18,7 @@ use Symfony\Component\HttpKernel\Bundle\Bundle;
  *
  * @final
  */
-class DropzoneBundle extends Bundle
+class DropzonemultipleBundle extends Bundle
 {
     public function getPath(): string
     {

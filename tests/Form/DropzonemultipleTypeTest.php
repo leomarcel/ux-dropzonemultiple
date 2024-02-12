@@ -31,14 +31,14 @@ class DropzonemultipleTypeTest extends TestCase
         $container = $kernel->getContainer()->get('test.service_container');
 
         $form = $container->get(FormFactoryInterface::class)->createBuilder()
-            ->add('photo', DropzonemultipleType::class, ['attr' => ['data-controller' => 'mydropzone']])
+            ->add('photo', DropzonemultipleType::class, ['attr' => ['data-controller' => 'mydropzonemultiple']])
             ->getForm()
         ;
 
         $rendered = $container->get(Environment::class)->render('dropzonemultiple_form.html.twig', ['form' => $form->createView()]);
 
         $this->assertSame(
-            '<form name="form" method="post" enctype="multipart/form-data"><div id="form"><div><label for="form_photo" class="required">Photo</label><div class="dropzonemultiple-container" data-controller="mydropzone leomarcel--ux-dropzonemultiple--dropzonemultiple">
+            '<form name="form" method="post" enctype="multipart/form-data"><div id="form"><div><label for="form_photo" class="required">Photo</label><div class="dropzonemultiple-container" data-controller="mydropzonemultiple leomarcel--ux-dropzonemultiple--dropzonemultiple">
         <input type="file" id="form_photo" name="form[photo]" required="required" data-controller="" class="dropzonemultiple-input" data-leomarcel--ux-dropzonemultiple--dropzonemultiple-target="input" />
 
         <div class="dropzonemultiple-placeholder" data-leomarcel--ux-dropzonemultiple--dropzonemultiple-target="placeholder"></div>

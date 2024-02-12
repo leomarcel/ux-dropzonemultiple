@@ -18,7 +18,7 @@ use Symfony\Component\DependencyInjection\Alias;
 use Symfony\Component\DependencyInjection\ContainerBuilder;
 use Symfony\Component\Form\FormFactoryInterface;
 use Symfony\Component\HttpKernel\Kernel;
-use leomarcel\UX\Dropzonemultiple\DropzoneBundle;
+use leomarcel\UX\Dropzonemultiple\DropzonemultipleBundle;
 
 /**
  * @author Titouan Galopin <galopintitouan@gmail.com>
@@ -31,7 +31,7 @@ class TwigAppKernel extends Kernel
 
     public function registerBundles(): iterable
     {
-        return [new FrameworkBundle(), new TwigBundle(), new DropzoneBundle()];
+        return [new FrameworkBundle(), new TwigBundle(), new DropzonemultipleBundle()];
     }
 
     public function registerContainerConfiguration(LoaderInterface $loader)

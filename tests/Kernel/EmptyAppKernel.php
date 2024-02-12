@@ -13,7 +13,7 @@ namespace leomarcel\UX\Dropzonemultiple\Tests\Kernel;
 
 use Symfony\Component\Config\Loader\LoaderInterface;
 use Symfony\Component\HttpKernel\Kernel;
-use leomarcel\UX\Dropzonemultiple\DropzoneBundle;
+use leomarcel\UX\Dropzonemultiple\DropzonemultipleBundle;
 
 /**
  * @author Titouan Galopin <galopintitouan@gmail.com>
@@ -26,7 +26,7 @@ class EmptyAppKernel extends Kernel
 
     public function registerBundles(): iterable
     {
-        return [new DropzoneBundle()];
+        return [new DropzonemultipleBundle()];
     }
 
     public function registerContainerConfiguration(LoaderInterface $loader)

@@ -18,7 +18,7 @@ Install the bundle using Composer and Symfony Flex:
 
 .. code-block:: terminal
 
-    $ composer require leomarcel/ux-dropzonemultiple
+    $ composer require @leomarcel/ux-dropzonemultiple
 
 If you're using WebpackEncore, install your assets and restart Encore (not
 needed if you're using AssetMapper):
@@ -62,19 +62,19 @@ Symfony UX Dropzonemultiple provides a default stylesheet in order to ease
 usage. You can disable it to add your own design if you wish.
 
 In ``assets/controllers.json``, disable the default stylesheet by
-switching the ``leomarcel/ux-dropzonemultiple/src/style.css`` autoimport to
+switching the ``@leomarcel/ux-dropzonemultiple/src/style.css`` autoimport to
 ``false``:
 
 .. code-block:: json
 
     {
         "controllers": {
-            "leomarcel/ux-dropzonemultiple": {
+            "@leomarcel/ux-dropzonemultiple": {
                 "dropzonemultiple": {
                     "enabled": true,
                     "fetch": "eager",
                     "autoimport": {
-                        "leomarcel/ux-dropzonemultiple/src/style.css": false
+                        "@leomarcel/ux-dropzonemultiple/src/style.css": false
                     }
                 }
             }
@@ -141,7 +141,7 @@ Then in your form, add your controller as an HTML attribute::
             $builder
                 // ...
                 ->add('photo', DropzonemultipleType::class, [
-                    'attr' => ['data-controller' => 'mydropzone'],
+                    'attr' => ['data-controller' => 'mydropzonemultiple'],
                 ])
                 // ...
             ;

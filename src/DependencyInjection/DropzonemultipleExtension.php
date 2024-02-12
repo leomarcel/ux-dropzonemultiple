@@ -23,7 +23,7 @@ use leomarcel\UX\Dropzonemultiple\Form\DropzonemultipleType;
  *
  * @internal
  */
-class DropzoneExtension extends Extension implements PrependExtensionInterface
+class DropzonemultipleExtension extends Extension implements PrependExtensionInterface
 {
     public function prepend(ContainerBuilder $container)
     {

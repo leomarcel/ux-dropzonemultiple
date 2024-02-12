@@ -22,7 +22,7 @@ use leomarcel\UX\Dropzonemultiple\Tests\Kernel\TwigAppKernel;
  *
  * @internal
  */
-class DropzoneBundleTest extends TestCase
+class DropzonemultipleBundleTest extends TestCase
 {
     public static function provideKernels()
     {
@@ -37,7 +37,7 @@ class DropzoneBundleTest extends TestCase
     public function testBootKernel(Kernel $kernel)
     {
         $kernel->boot();
-        $this->assertArrayHasKey('DropzoneBundle', $kernel->getBundles());
+        $this->assertArrayHasKey('DropzonemultipleBundle', $kernel->getBundles());
     }
 
     public function testFormThemeMerging()

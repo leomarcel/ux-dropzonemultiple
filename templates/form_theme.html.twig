@@ -1,4 +1,4 @@
-{% block dropzone_widget -%}
+{% block dropzonemultiple_widget -%}
     {%- set dataController = (attr['data-controller']|default('') ~ ' leomarcel--ux-dropzonemultiple--dropzonemultiple')|trim -%}
     {%- set attr = attr|merge({'data-controller': '', class: (attr.class|default('') ~ ' dropzonemultiple-input')|trim}) -%}
 

@@ -15,7 +15,7 @@ use Symfony\Bundle\FrameworkBundle\FrameworkBundle;
 use Symfony\Component\Config\Loader\LoaderInterface;
 use Symfony\Component\DependencyInjection\ContainerBuilder;
 use Symfony\Component\HttpKernel\Kernel;
-use leomarcel\UX\Dropzonemultiple\DropzoneBundle;
+use leomarcel\UX\Dropzonemultiple\DropzonemultipleBundle;
 
 /**
  * @author Titouan Galopin <galopintitouan@gmail.com>
@@ -28,7 +28,7 @@ class FrameworkAppKernel extends Kernel
 
     public function registerBundles(): iterable
     {
-        return [new FrameworkBundle(), new DropzoneBundle()];
+        return [new FrameworkBundle(), new DropzonemultipleBundle()];
     }
 
     public function registerContainerConfiguration(LoaderInterface $loader)
