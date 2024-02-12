@@ -3,7 +3,7 @@
     "type": "symfony-bundle",
     "description": "File input Dropzonesmultiple for Symfony Forms",
     "keywords": [
-        "symfony-ux"
+        "leomarcel-ux"
     ],
     "homepage": "https://symfony.com",
     "license": "MIT",
@@ -19,12 +19,12 @@
     ],
     "autoload": {
         "psr-4": {
-            "Symfony\\UX\\Dropzonemultiple\\": "src/"
+            "leomarcel\\UX\\Dropzonemultiple\\": "src/"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "Symfony\\UX\\Dropzonemultiple\\Tests\\": "tests/"
+            "leomarcel\\UX\\Dropzonemultiple\\Tests\\": "tests/"
         }
     },
     "require": {
@@ -44,8 +44,7 @@
     },
     "extra": {
         "thanks": {
-            "name": "symfony/ux",
-            "url": "https://github.com/symfony/ux"
+            "name": "leomarcel/ux"
         }
     },
     "minimum-stability": "dev"

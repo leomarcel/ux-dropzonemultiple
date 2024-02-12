@@ -9,7 +9,7 @@
  * file that was distributed with this source code.
  */
 
-namespace Symfony\UX\Dropzonemultiple\Tests\Kernel;
+namespace leomarcel\UX\Dropzonemultiple\Tests\Kernel;
 
 use Symfony\Bundle\FrameworkBundle\FrameworkBundle;
 use Symfony\Bundle\TwigBundle\TwigBundle;
@@ -18,7 +18,7 @@ use Symfony\Component\DependencyInjection\Alias;
 use Symfony\Component\DependencyInjection\ContainerBuilder;
 use Symfony\Component\Form\FormFactoryInterface;
 use Symfony\Component\HttpKernel\Kernel;
-use Symfony\UX\Dropzonemultiple\DropzoneBundle;
+use leomarcel\UX\Dropzonemultiple\DropzoneBundle;
 
 /**
  * @author Titouan Galopin <galopintitouan@gmail.com>

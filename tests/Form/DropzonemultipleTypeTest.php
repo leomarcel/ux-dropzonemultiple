@@ -9,12 +9,12 @@
  * file that was distributed with this source code.
  */
 
-namespace Symfony\UX\Dropzonemultiple\Tests;
+namespace leomarcel\UX\Dropzonemultiple\Tests;
 
 use PHPUnit\Framework\TestCase;
 use Symfony\Component\Form\FormFactoryInterface;
-use Symfony\UX\Dropzonemultiple\Form\DropzonemultipleType;
-use Symfony\UX\Dropzonemultiple\Tests\Kernel\TwigAppKernel;
+use leomarcel\UX\Dropzonemultiple\Form\DropzonemultipleType;
+use leomarcel\UX\Dropzonemultiple\Tests\Kernel\TwigAppKernel;
 use Twig\Environment;
 
 /**
@@ -38,19 +38,19 @@ class DropzonemultipleTypeTest extends TestCase
         $rendered = $container->get(Environment::class)->render('dropzonemultiple_form.html.twig', ['form' => $form->createView()]);
 
         $this->assertSame(
-            '<form name="form" method="post" enctype="multipart/form-data"><div id="form"><div><label for="form_photo" class="required">Photo</label><div class="dropzonemultiple-container" data-controller="mydropzone symfony--ux-dropzonemultiple--dropzonemultiple">
-        <input type="file" id="form_photo" name="form[photo]" required="required" data-controller="" class="dropzonemultiple-input" data-symfony--ux-dropzonemultiple--dropzonemultiple-target="input" />
+            '<form name="form" method="post" enctype="multipart/form-data"><div id="form"><div><label for="form_photo" class="required">Photo</label><div class="dropzonemultiple-container" data-controller="mydropzone leomarcel--ux-dropzonemultiple--dropzonemultiple">
+        <input type="file" id="form_photo" name="form[photo]" required="required" data-controller="" class="dropzonemultiple-input" data-leomarcel--ux-dropzonemultiple--dropzonemultiple-target="input" />
 
-        <div class="dropzonemultiple-placeholder" data-symfony--ux-dropzonemultiple--dropzonemultiple-target="placeholder"></div>
+        <div class="dropzonemultiple-placeholder" data-leomarcel--ux-dropzonemultiple--dropzonemultiple-target="placeholder"></div>
 
-        <div class="dropzonemultiple-preview" data-symfony--ux-dropzonemultiple--dropzonemultiple-target="preview" style="display: none">
+        <div class="dropzonemultiple-preview" data-leomarcel--ux-dropzonemultiple--dropzonemultiple-target="preview" style="display: none">
             <button class="dropzonemultiple-preview-button" type="button"
-                    data-symfony--ux-dropzonemultiple--dropzonemultiple-target="previewClearButton"></button>
+                    data-leomarcel--ux-dropzonemultiple--dropzonemultiple-target="previewClearButton"></button>
 
             <div class="dropzonemultiple-preview-image" style="display: none"
-                 data-symfony--ux-dropzonemultiple--dropzonemultiple-target="previewImage"></div>
+                 data-leomarcel--ux-dropzonemultiple--dropzonemultiple-target="previewImage"></div>
 
-            <div data-symfony--ux-dropzonemultiple--dropzonemultiple-target="previewFilename" class="dropzonemultiple-preview-filename"></div>
+            <div data-leomarcel--ux-dropzonemultiple--dropzonemultiple-target="previewFilename" class="dropzonemultiple-preview-filename"></div>
         </div>
     </div></div></div></form>
 ',

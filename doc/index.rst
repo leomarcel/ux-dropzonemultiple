@@ -39,7 +39,7 @@ The most common usage of Symfony UX Dropzonemultiple is to use it as a drop-in
 replacement of the native FileType class::
 
     // ...
-    use Symfony\UX\Dropzonemultiple\Form\DropzonemultipleType;
+    use leomarcel\UX\Dropzonemultiple\Form\DropzonemultipleType;
 
     class CommentFormType extends AbstractType
     {
@@ -132,7 +132,7 @@ custom Stimulus controller:
 Then in your form, add your controller as an HTML attribute::
 
     // ...
-    use Symfony\UX\Dropzonemultiple\Form\DropzonemultipleType;
+    use leomarcel\UX\Dropzonemultiple\Form\DropzonemultipleType;
 
     class CommentFormType extends AbstractType
     {

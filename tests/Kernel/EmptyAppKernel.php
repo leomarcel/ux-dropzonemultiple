@@ -9,11 +9,11 @@
  * file that was distributed with this source code.
  */
 
-namespace Symfony\UX\Dropzonemultiple\Tests\Kernel;
+namespace leomarcel\UX\Dropzonemultiple\Tests\Kernel;
 
 use Symfony\Component\Config\Loader\LoaderInterface;
 use Symfony\Component\HttpKernel\Kernel;
-use Symfony\UX\Dropzonemultiple\DropzoneBundle;
+use leomarcel\UX\Dropzonemultiple\DropzoneBundle;
 
 /**
  * @author Titouan Galopin <galopintitouan@gmail.com>

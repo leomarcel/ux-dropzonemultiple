@@ -9,14 +9,14 @@
  * file that was distributed with this source code.
  */
 
-namespace Symfony\UX\Dropzonemultiple\DependencyInjection;
+namespace leomarcel\UX\Dropzonemultiple\DependencyInjection;
 
 use Symfony\Component\AssetMapper\AssetMapperInterface;
 use Symfony\Component\DependencyInjection\ContainerBuilder;
 use Symfony\Component\DependencyInjection\Definition;
 use Symfony\Component\DependencyInjection\Extension\PrependExtensionInterface;
 use Symfony\Component\HttpKernel\DependencyInjection\Extension;
-use Symfony\UX\Dropzonemultiple\Form\DropzonemultipleType;
+use leomarcel\UX\Dropzonemultiple\Form\DropzonemultipleType;
 
 /**
  * @author Titouan Galopin <galopintitouan@gmail.com>

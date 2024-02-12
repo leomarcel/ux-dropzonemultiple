@@ -9,7 +9,7 @@
  * file that was distributed with this source code.
  */
 
-namespace Symfony\UX\Dropzonemultiple;
+namespace leomarcel\UX\Dropzonemultiple;
 
 use Symfony\Component\HttpKernel\Bundle\Bundle;
 
