@@ -1,5 +1,5 @@
 {
-    "name": "symfony/ux-dropzonemultiple",
+    "name": "leomarcel/ux-dropzonemultiple",
     "type": "symfony-bundle",
     "description": "File input Dropzonesmultiple for Symfony Forms",
     "keywords": [
