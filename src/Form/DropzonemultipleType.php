@@ -13,6 +13,7 @@ namespace leomarcel\UX\Dropzonemultiple\Form;
 
 use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\Extension\Core\Type\FileType;
+use Symfony\Component\Form\Extension\Core\Type\TextType;
 use Symfony\Component\OptionsResolver\OptionsResolver;
 
 /**
@@ -24,11 +25,11 @@ class DropzonemultipleType extends AbstractType
 {
     public function configureOptions(OptionsResolver $resolver)
     {
-        $resolver->setDefaults([
-            'attr' => [
-                'placeholder' => 'Drag and drop or browse',
-            ],
-        ]);
+      $resolver->setDefaults([
+        'attr' => [
+          'placeholder' => 'Drag and drop or browse',
+        ],
+      ]);
     }
 
     public function getParent()

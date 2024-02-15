@@ -1,6 +1,6 @@
 {
     "name": "@leomarcel/ux-dropzonemultiple",
-    "description": "File input Dropzonesmultiple for Symfony Forms",
+    "description": "File input Dropzonemultiple for Symfony Forms",
     "license": "MIT",
     "version": "1.1.0",
     "main": "dist/controller.js",

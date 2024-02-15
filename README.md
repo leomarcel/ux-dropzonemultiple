@@ -1,6 +1,6 @@
 # Symfony UX Dropzonemultiple
 
-Symfony UX Dropzonemultiple is a Symfony bundle providing light Dropzonesmultiple for file inputs
+Symfony UX Dropzonemultiple is a Symfony bundle providing light Dropzonemultiple for file inputs
 in Symfony Forms. It is part of [the Symfony UX initiative](https://symfony.com/ux).
 
 It allows visitors to drag and drop files into a container instead of having
