@@ -39,6 +39,6 @@ class DropzonemultipleType extends AbstractType
 
     public function getBlockPrefix()
     {
-        return 'dropzonemultiple';
+      return 'dropzonemultiple';
     }
 }

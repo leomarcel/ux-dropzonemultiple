@@ -30,9 +30,8 @@ class DropzonemultipleExtension extends Extension implements PrependExtensionInt
     // Register the Dropzonemultiple form theme if TwigBundle is available
     $bundles = $container->getParameter('kernel.bundles');
 
-    if (isset($bundles['TwigBundle'])) {
+//    if (isset($bundles['TwigBundle'])) {
       $container->prependExtensionConfig('twig', ['form_themes' => ['@Dropzonemultiple/form_theme.html.twig']]);
-    }
 
     if ($this->isAssetMapperAvailable($container)) {
       $container->prependExtensionConfig('framework', [

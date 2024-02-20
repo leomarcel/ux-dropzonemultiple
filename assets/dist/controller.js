@@ -1,8 +1,9 @@
 import { Controller } from '@hotwired/stimulus';
 
-class default_1 extends Controller {
+export default class extends Controller {
+    static targets= ['input', 'placeholder', 'preview', 'previewClearButton', 'previewFilename', 'previewImage'];
+
     connect() {
-        console.log('connected eomarcel-ux-dropzonemultiple-controller.js')
         this.clear();
         this.previewClearButtonTarget.addEventListener('click', () => this.clear());
         this.inputTarget.addEventListener('change', (event) => this.onInputChange(event));
@@ -33,7 +34,7 @@ class default_1 extends Controller {
             if (file.type && file.type.indexOf('image') !== -1) {
                 this._populateImagePreview(file);
             }
-            this.dispatchEvent('change', event.target.files);
+            this.dispatchEvent('change', file);
         }
     }
     _populateImagePreview(file) {
@@ -74,6 +75,3 @@ class default_1 extends Controller {
         this.element.dispatchEvent(userEvent);
     }
 }
-default_1.targets = ['input', 'placeholder', 'preview', 'previewClearButton', 'previewFilename', 'previewImage'];
-
-export { default_1 as default };

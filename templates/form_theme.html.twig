@@ -1,24 +1,27 @@
 {% block dropzonemultiple_widget -%}
-    {%- set dataController = (attr['data-controller']|default('') ~ ' leomarcel--ux-dropzonemultiple--dropzonemultiple')|trim -%}
-    {%- set attr = attr|merge({'data-controller': '', class: (attr.class|default('') ~ ' dropzonemultiple-input')|trim}) -%}
+  <style>
+      .dropzonemultiple-container{position:relative;display:flex;min-height:100px;border:2px dashed #bbb;align-items:center;padding:20px 10px}.dropzonemultiple-input{position:absolute;display:block;top:0;left:0;width:100%;height:100%;opacity:0;cursor:pointer;z-index:1}.dropzonemultiple-preview{display:flex;align-items:center;max-width:100%}.dropzonemultiple-preview-image{flex-basis:0;min-width:50px;max-width:50px;height:50px;margin-right:10px;background-size:contain;background-position:50% 50%;background-repeat:no-repeat}.dropzonemultiple-preview-filename{word-wrap:anywhere}.dropzonemultiple-preview-button{position:absolute;top:0;right:0;z-index:1;border:none;margin:0;padding:0;width:auto;overflow:visible;background:0 0;color:inherit;font:inherit;line-height:normal;-webkit-font-smoothing:inherit;-moz-osx-font-smoothing:inherit;-webkit-appearance:none}.dropzonemultiple-preview-button::before{content:'×';padding:3px 7px;cursor:pointer}.dropzonemultiple-placeholder{flex-grow:1;text-align:center;color:#999}
+  </style>
 
-    <div class="dropzonemultiple-container" data-controller="{{ dataController }}">
-        <input type="file" {{ block('widget_attributes') }} data-leomarcel--ux-dropzonemultiple--dropzonemultiple-target="input" />
+  {%- set dataController = (attr['data-controller']|default('') ~ ' dropzonemultiple--dropzonemultiple')|trim -%}
+  {%- set attr = attr|merge({ 'data-controller': '', class: (attr.class|default('') ~ ' dropzonemultiple-input')|trim}) -%}
 
-        <div class="dropzonemultiple-placeholder" data-leomarcel--ux-dropzonemultiple--dropzonemultiple-target="placeholder">
-            {%- if attr.placeholder is defined and attr.placeholder is not none -%}
-                {{- translation_domain is same as(false) ? attr.placeholder : attr.placeholder|trans({}, translation_domain) -}}
-            {%- endif -%}
-        </div>
-
-        <div class="dropzonemultiple-preview" data-leomarcel--ux-dropzonemultiple--dropzonemultiple-target="preview" style="display: none">
-            <button class="dropzonemultiple-preview-button" type="button"
-                    data-leomarcel--ux-dropzonemultiple--dropzonemultiple-target="previewClearButton"></button>
-
-            <div class="dropzonemultiple-preview-image" style="display: none"
-                 data-leomarcel--ux-dropzonemultiple--dropzonemultiple-target="previewImage"></div>
-
-            <div data-leomarcel--ux-dropzonemultiple--dropzonemultiple-target="previewFilename" class="dropzonemultiple-preview-filename"></div>
-        </div>
+  <div class="dropzonemultiple-container" data-controller="{{ dataController }}">
+    <input type="file" {{ block('widget_attributes') }} data-dropzonemultiple--dropzonemultiple-target="input" />
+    <div class="dropzone-placeholder" data-dropzonemultiple--dropzonemultiple-target="placeholder">
+      {%- if attr.placeholder is defined and attr.placeholder is not none -%}
+        {{- translation_domain is same as(false) ? attr.placeholder : attr.placeholder|trans({}, translation_domain) -}}
+      {%- endif -%}
     </div>
+
+    <div class="dropzonemultiple-preview" data-dropzonemultiple--dropzonemultiple-target="preview" style="display: none">
+      <button class="dropzonemultiple-preview-button" type="button"
+              data-dropzonemultiple--dropzonemultiple-target="previewClearButton"></button>
+
+      <div class="dropzonemultiple-preview-image" style="display: none"
+           data-dropzonemultiple--dropzonemultiple-target="previewImage"></div>
+
+      <div data-dropzonemultiple--dropzonemultiple-target="previewFilename" class="dropzonemultiple-preview-filename"></div>
+    </div>
+  </div>
 {%- endblock %}
